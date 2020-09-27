@@ -10,7 +10,6 @@
     /* Espacio entre Filas */
     padding: 10px;
 
-
 }
 
 .col-12,
@@ -26,6 +25,7 @@
 .col-1 {
 
     padding: 0 10px;
+    margin-left: 2rem;
 }
 
 .col-12 {
@@ -85,5 +85,6 @@
 
     width: 100%;
     margin: 20px 0px;
+    margin-right: 5rem;
     padding: 10px
 }

@@ -16,9 +16,11 @@ header {
 .titulos{
     padding: 0 10px;
     color: #fff;
+    text-align: center;
 }
 .h1{
     text-decoration: underline;
+    text-align: center;
 }
 .fas {
     font-size: 50px;
