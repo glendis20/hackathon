@@ -5,7 +5,7 @@ form.addEventListener('submit', (event) => {
     const nombre = document.getElementById('nombre').value
     const apellido = document.getElementById('apellido').value
 
-    const alertNombre = document.getElementByI    
+    const alertNombre = document.getElementById('alertNombre')
     const alertApellido = document.getElementById('alertApellido');
     if (nombre == '') {
         alertNombre.innerText = 'Por favor llene este campo'
