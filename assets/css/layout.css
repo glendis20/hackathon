@@ -76,18 +76,12 @@
     flex-basis: 8.33%;
 }
 
-.box{
 
-    width: 210px;
-    height: 150px;
-    background-color: aqua;
-    margin: 10px;
-
-}
-.marg{
+.marg {
     margin: 20px 0px;
 }
-.button{
+
+.button {
 
     width: 100%;
     margin: 20px 0px;
