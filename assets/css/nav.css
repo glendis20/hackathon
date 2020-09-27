@@ -12,9 +12,19 @@
 
 .nav {
     display: flex;
+    justify-content: space-between;
+    width: 50%;
+    color: #fff
 }
 
+.nombre {
+    display: flex;
+}
+
+
+
 .titulos {
+
     padding: 0 10px;
     color: #fff;
 }
