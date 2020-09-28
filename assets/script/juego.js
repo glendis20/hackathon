@@ -3,7 +3,7 @@ const btnP2 = document.getElementById('btnP2');
 const btnP3 = document.getElementById('btnP3');
 const btnP4 = document.getElementById('btnP4');
 const btnP5 = document.getElementById('btnP5');
-const btnP6 = document.getElementById('btnP6');
+
 
 const foto1 = document.getElementById('foto1');
 const foto2 = document.getElementById('foto2');
@@ -31,35 +31,34 @@ let preguntas = {
     tieneAccesorio: 'No',
     tienePeloLargo: 'Si',
     tienePrendaOscura: 'Si',
+    estaSonriendo: 'No'
 }
 let tiempo = new Date().getSeconds()
 let tiempoTotal
 
 btnP1.addEventListener('click', () => {
-    swal(preguntas.esPeliNegro)
+    swal("Tiene cabello oscuro: "+preguntas.esPeliNegro)
 
 })
 btnP2.addEventListener('click', () => {
-    swal(preguntas.tieneAccesorio)
+    swal("Tiene accesorio: "+preguntas.tieneAccesorio)
 
 })
 
 btnP3.addEventListener('click', () => {
-    swal(preguntas.tienePeloLargo)
+    swal("Tiene cabello largo: "+preguntas.tienePeloLargo)
 
 })
 
 btnP4.addEventListener('click', () => {
-    swal(preguntas.tienePrendaOscura)
+    swal("Tiene prenda oscura: "+preguntas.tienePrendaOscura)
 })
 
 btnP5.addEventListener('click', () => {
-
-
-})
-btnP6.addEventListener('click', () => {
+    swal("Esta sonriendo: "+preguntas.estaSonriendo)
 
 })
+
 
 for (let i = 0; i < fotos.length; i++) {
     fotos[i].addEventListener('click', () => {
@@ -69,7 +68,7 @@ for (let i = 0; i < fotos.length; i++) {
 
 for (let i = 0; i < fotos.length; i++) {
     fotos[i].addEventListener('dblclick', () => {
-        if (fotos[i] === fotos[6]) {
+        if (fotos[i] === fotos[9]) {
             let demora = new Date().getSeconds()
             tiempoTotal = (demora - tiempo)
             if(tiempoTotal < 60){
@@ -93,9 +92,8 @@ for (let i = 0; i < fotos.length; i++) {
                 swal(`¡Felicidades! tu tiempo ha sido de: ${tiempoTotal} segundo`).then(value => {
                     if (value) {
                         puntajeTotal = 8
-                        localStorage.setItem('puntaje', puntajeTotal)
-                        puntaje.innerText = localStorage.getItem('puntaje')
-                        document.location.reload(true)
+                        puntaje.innerText = localStorage.setItem('puntaje',puntajeTotal)
+                            window.location='../html/perfile.html'
                     } else {
                         console.log('ta bien')
                     }
@@ -104,9 +102,8 @@ for (let i = 0; i < fotos.length; i++) {
                 swal(`¡Felicidades! tu tiempo ha sido de: ${tiempoTotal} segundos`).then(value => {
                     if (value) {
                         puntajeTotal = 8
-                        localStorage.setItem('puntaje', puntajeTotal)
                         puntaje.innerText = localStorage.getItem('puntaje')
-                        document.location.reload(true)
+                        window.location='../html/profile.html'
                     } else {
                         console.log('ta bien')
                     }
@@ -132,6 +129,7 @@ for (let i = 0; i < fotos.length; i++) {
                             console.log('ta bien')
                         }
                     })
+                    localStorage.getItem('puntaje',8)
             }
         }
     })

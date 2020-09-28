@@ -63,6 +63,30 @@ body{
     opacity: 1;
   }
   
+  
 .tachar{
-   background-color: #000000!important;
+   opacity: 0.2;
+}
+
+.instrucciones{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 55px 0;
+  line-height : 25px;
+}
+.preguntas{
+  display: flex;
+}
+button{
+  border: 2px solid  rgb(72,87,169);
+  background-color: #fff;
+  border-radius: 5px;
+}
+button:hover{
+  background-color:  rgb(72,87,169);
+  color: #fff;
 }
